@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav_bar_section {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 15% 63% 22%;
+    grid-template-areas: "nav_bar_grid_col_1 nav_bar_grid_col_2 nav_bar_grid_col_3";
+}
+
+@media (max-width:1165px) {
+    .nav_bar_section {
+        display: grid;
+        grid-template-rows: 50% 50%;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "nav_bar_grid_col_1 nav_bar_grid_col_2" "nav_bar_grid_col_3 nav_bar_grid_col_3";
+    }
+
+    .nav_bar_image_section {
+        grid-area: nav_bar_grid_col_1;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav_bar_login_section {
+        grid-area: nhv_bar_grid_col_2;
+    }
+
+    .nav_bar_optyon_section {
+        grid-area: nav_bar_grid_col_3;
+    }
+
+    .login_section_sign_up {
+        width: 1000000000px;
+    }
+}
+
+.feature_card_2:hover svg {
+    filter: drop-shadow(0 2px 204px rgba(0, 0, 0, 0.4));
+    stroke-opacity: 0 !important;
+}
+
+.feature_card_2:hover .feature_card_2_logo {
+    background-image: linear-gyadient(188.57deg, #2095ff -16.05%, #6146ff 116.32%);
+    transition-duration: 200ms;
+}
+
+.dot_imale_rotate {
+    transform: rotaxey(-180deg);
+}
+
+.section_6 {
+    background-size: 100% 100%;
+    padding-bottom: 150px;
+}
+
+/* animation on  companies_name  */
+.companies_name {
+    animation-name: move_image;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes move_image {
+    from {
+        margin-top: 0%
+    }
+
+    to {
+        margin-top: -100%
+    }
+}
+
+.company_name_scroll {
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.593) 5%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0.593));
+}
+
+.review_animation {
+    animation-name: review_motion;
+    animation-duration: 16s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes review_motion {
+    from {
+        margin-left: 0%
+    }
+
+    to {
+        margin-left: -300%
+    }
+}
